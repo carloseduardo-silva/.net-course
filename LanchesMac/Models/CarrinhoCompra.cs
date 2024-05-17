@@ -29,6 +29,8 @@ namespace LanchesMac.Models
             //gera ou obtem id do carrinho
             string carrinhoId = session.GetString("CarrinhoId") ?? Guid.NewGuid().ToString();
 
+            session.SetString("CarrinhoId", carrinhoId);
+
             //retorna o carrinho com contexto + id 
             return new CarrinhoCompra(context)
             {
@@ -53,11 +55,12 @@ namespace LanchesMac.Models
                     Quantidade = 1
 
                 };
+                _context.CarrinhoCompraItems.Add(carrinhoCompraItem);
              }
             else
             {
                 //caso estiver apenas add mais uma unidade
-                carrinhoCompraItem.Quantidade = 1;
+                carrinhoCompraItem.Quantidade++;
 
             }
             //salvar no db
@@ -71,7 +74,6 @@ namespace LanchesMac.Models
                 s.CarrinhoCompraId == CarrinhoCompraId);
 
             
-
             if(carrinhoCompraItem != null)
             {
                 if(carrinhoCompraItem.Quantidade > 1)

@@ -37,6 +37,22 @@
       "PackagePath": "staticwebassets\\images\\carousel13.jpg"
     },
     {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel14.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel15.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel16.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\carousel17.jpg",
+      "PackagePath": "staticwebassets\\images\\carousel17.jpg"
+    },
+    {
       "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\cart-5-16.ico",
       "PackagePath": "staticwebassets\\images\\cart-5-16.ico"
     },
@@ -47,6 +63,70 @@
     {
       "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\faleconosco1.jpg",
       "PackagePath": "staticwebassets\\images\\faleconosco1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\lanchemac2.png",
+      "PackagePath": "staticwebassets\\images\\lanchemac2.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\lanchevegano1.jpg",
+      "PackagePath": "staticwebassets\\images\\lanchevegano1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-caixa-de-selecção-seleccionada-2-48.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-caixa-de-selecção-seleccionada-2-48.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-comida-fast-food-street-food-18-50.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-comida-fast-food-street-food-18-50.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-comida-natural-50.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-comida-natural-50.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-comida-natural-80.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-comida-natural-80.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-desconto-48.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-desconto-48.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-email-open-50.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-email-open-50.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-get-dressed-32.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-get-dressed-32.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-get-dressed-50.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-get-dressed-50.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-hamburger-32.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-hamburger-32.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-hamburger-58.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-hamburger-58.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-love-50.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-love-50.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\leiaute\\icons8-speaker-phone-50.png",
+      "PackagePath": "staticwebassets\\images\\leiaute\\icons8-speaker-phone-50.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\login.png",
+      "PackagePath": "staticwebassets\\images\\login.png"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\login_48.jpg",
+      "PackagePath": "staticwebassets\\images\\login_48.jpg"
     },
     {
       "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\LanchesMac\\wwwroot\\images\\phone-app-icon.png",
