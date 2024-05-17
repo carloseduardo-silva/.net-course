@@ -1,0 +1,227 @@
+ESTUDOS .NET 6.0 MVC
+
+MVC: URL corresponde á uma AÇÃO de um controlador e não a uma pagina - url/{controlador}/{action}/{id}
+
+Ação são criadas dentro dos CONTROLLERS
+
+----------------------------------------------- 
+
+MODEL: Modelo de negócio (pouco alterado): Utilizado para definir a forma como os dados estarão dispostos, implementar getters/setters + validações (data anotations)
+
+----------------------------------------------- 
+
+VIEW: Interface do Usuário (o que o cliente vê): basicamente trabalhar o html o que o cliente ve
+
+utilizar código razor(@ ou @model ControllerName) para importar dados definidos na model/controller
+
+
+----------------------------------------------- 
+
+CONTROLLER: Determina as alterações de dados e diferentes urls através de ACTIONS, sendo representadas na VIEW.
+
+public IActionResult ActionName()
+{
+   return View(podem ser passados parametros)
+}
+
+----------------------------------------------- 
+ENTITY FRAMEWORK CORE (EF6): Ferramenta ORM (Mapeador de Objeto Relacional): permite trabalhar com dados na forma de objetos de dominio (classes).
+
+Code First => Banco de Dados e tabelas são geradas/mapeadas a partir das Classes de Domínio.
+
+AULA 18 MODULO 3 - CONFIG DO EF
+1. Instalar pacotes: Microsoft.Entity.Framework.Core.(tools/design/sqlserver)
+2. criar contexto(pasta) para mapear as classes (AppDbContext)
+3. Definir string de conexão
+4. configurar startup -> ConfigureServices
+
+
+EF7 -> PROBLEMA COM CERTICADO VÁLIDO DE SEGURANÇA
+*Adicionar -> TrustServerCertificate=True
+
+gerar certificado: dotnet dev-certs https
+conferir certificado: dotnet dev-certs https --check
+confiar certificado: dotnet dev-certs https --trust
+
+
+DATA NOTATIONS => Basicamente os atributos/validações recebidos pelos dados/classes de dominio presentes no Model os quais serão representados no db -> evitar conflito na criação das tabelas na hora do migration
+
+[NOT MAPPED]: permite uma classe não ser mapeada para o DB.
+
+EXEMPLO: 
+
+[StringLength(100, ErroMessage="")]
+public string Nome {get; set;}
+
+-----------------------------------------------
+
+MIGRATIONS: Atualização/Mapeamento das classes de dominio em DB
+Após config certinha da AULA18:
+No Package Manager Console:
+1. add-migration Name
+2. update-migration (cria banco de dados)
+3 remove-mgration
+
+
+PRRENCHER TABELAS ATRVÉS DO MIGRATION:
+1. add-migration Name
+
+2. utilizar/config os métodos up(insert into) e down(delete from)
+migrationBuilder.sql("INSERT INTO Tabela(ColunaName)" + "VALUES('Name')")
+migrationBuilder.sql("DELETE FROM Tabela")
+
+3. update-database 
+
+-----------------------------------------------
+
+PADRÃO REPOSITORY: Intermedia o caminho entre o AppDbContext (Contexto EF) e os Controllers.
+
+2 arquivos: Criar Pasta 
+
+Repositories: Atribuir dados do DB utilizando as variaveis e funçoes declaradas nas Interfaces
+ e 
+Interfaces(dentro de Repositories) Declarar Variaveis e Funçoes
+
+Consultas LINQ: importação dos dados através de queries utilizando Include, Where(filtrar), FirstOrDefault(recebe um parametro, e retorna o primeiro e unico elemento), aplicadas no repository
+
+-----------------------------------------------
+
+INJEÇÃO DE DEPENDÊNCIA: Injeção de instancia dos repositories + interfaces, que permitem que os controladores tenham acesso ao dados do Db.
+
+Feita NA pasta Startup, através de: services.AddTransient<Interface, Repository>();
+
+Logo, podemos gerar um construtor o qual instancia a interface e acessa os dados NO controller, 
+através de: private readonly INameRepository _nameRepository;
+
+Dentro do controllador, instanciar/injetar dependencias, acessar dados do DB, mandar para view,
+criar view por razor pages(personalizavel) para exibição dos dados.
+
+-----------------------------------------------
+
+ Armazenar e Recuperar Valores do controller para view
+
+1.ViewData:
+
+Controller: ViewData["Exemplo"] = "Titulo do Ex"/ Instancia de objeto de dados.
+
+View: @ViewData["Exemplo"]
+
+
+2.ViewBag: 
+
+Controller: ViewBag.titulo = "Titulo do Ex"/ Instancia de objeto de dados.
+
+View: @ViewBag.titulo
+
+3.TempData: Recupera 1 vez e depois some
+
+-----------------------------------------------
+
+Arquivo _ViewStart: garante que as views, utilizem do padrão de estilo configurado em _Layout
+
+Arquivo _ViewImport: garante para as views o acesso aos imports presentes no arquivo
+
+-----------------------------------------------
+
+VIEW MODEL: Criar Listas Suspensas/Armazenar informações presentes no modelo de domínio (model), que serão usadas SOMENTE nas Views
+
+Utilizado em Carrinho de compras, login e registro, paginação de dados.
+
+Criar Pasta para ViewModels
+Referenciar viewModels na pasta _viewImports
+Referenciar as classes de dominio na ExampleViewModel.cs
+Instanciar ExampleViewModel no controller e atribui-lo a var
+Atribuir valores(vindos da injeção de dependencia) aos atributos da var e mandar para view
+Na view alterar ref de @model para ExampleViewModel e utilizar model.atributos para acessar valores
+
+-----------------------------------------------
+
+Partial View: Componentes de VIEW (= componente do react) - 
+Pode ser reutilizada nas paginas VIEW a partir da chamada <partial name='' for='Model'>
+
+Criar as partial na pasta shared.
+
+
+-----------------------------------------------
+
+SESSION: Resgatar/guardar dados de acordo com a sessão/estado através de cookies (tempo padrao de 20min)
+* semelhante a um local/session storage
+
+1.Config na pasta Startup: services. AddMemoryCache(), AddSession(), AddSingleton<IHttpContextAccessor, HttpContextAccessor>(); mais abaixo: use.Session();
+
+2. Definir sessão no Model = 
+//DEFINE UMA SESSAO
+ISession session = services.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+
+//OBTEM UM SERVICO DO TIPO DO NOSSO CONTEXTO
+var context = services.GetService<DbContext>();
+
+-----------------------------------------------
+
+DISPARAR EVENTOS A PARTIR DE UM ELEMENTO NA VIEW:
+
+tags presentes (asp-controller, asp-action, asp-for) são chamadas de TAG HELPERS
+
+  <a asp-controller="Controller" asp-action="Ação" 
+      asp-route-lancheId="@item.instancia.itemid"> 
+  </a>   ---> 
+
+CRIAÇÃO DE TAG HELPER:
+1.evidenciar uso na pasta _Imports, junto com as taghelpers ja definidas pela microsoft
+2. Criar pasta Taghelpers + Config taghelper (public override void Process)
+
+taghelper => semelhante ao html e suas tag, geralmente é melhor utilizar o html vanilla ao em vez de criar tag helpers
+
+-----------------------------------------------
+
+ViewComponents: Comportamento semelhante ao método action dos Controladores
+
+1.Criar pasta componentes + criar classes para viewcomponents
+
+2.Na classes Viewcomponent -> herdar ViewComponent + injetar dependencias + passar dados para view
+
+3. dentro da pasta shared/components/ -> criar pasta para viewModel + arquivo view default (onde o html + dados serão exibidos)
+
+4. invocar viewComponent em _layout @await Component.Invoke("Nome da VC").
+
+------------------------------------------------
+
+ROTEAMENTO: sistemas de rotas através de endpoints, feito na pasta STARTUP
+
+app.useEndpoints (endpoints => 
+{
+endpoints.MapControllerRoute(
+name:"default",
+pattern: "{controller=Home}/{action=Index}/{id?(param opcional)}"
+defaults: {controller ="controller default", action="action default"}
+)
+}
+
+*ORDEM DAS ROTAS IMPORTA, TENDENCIA A RENDERIZA SEMPRE AS QUE VEM PRIMEIRO
+
+
+------------------------------------------------
+
+IDENTITY: Instalação que suporte para login e registro do proprio ASP.NET CORE.
+
+Para editar as paginas geradas automaticamente: 
+1.Botão direito no projeto, abrir menu scafold, identity, selecionar paginas que serão alteradas 
+-> assim o acesso as VIEWS E CONTROLLERS das paginas de login e registro estará disponível em Areas/Identity
+
+CONFIG:
+1. Instalar microsoft.identyCore dependencie
+2. config no db.Context: herdar IdentyDbContext<IdentityUser>
+3. config no _startup: configure services + app.useAuthetication
+
+CRIAR ACCOUNT CONTROLLER: 
+Teremos DI(Injeção de dependencia) para userManegement, signInManager
+
+------------------------------------------------
+
+VIEW INJECTION: permite injetar dependecias em uma View através da palavra chave @Inject
+
+
+
+
+
+
