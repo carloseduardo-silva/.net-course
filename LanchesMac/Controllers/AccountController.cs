@@ -83,6 +83,15 @@ namespace LanchesMac.Controllers
             return View(registroVM);
 
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.User = null;
+            await _singInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
     }
 
 }

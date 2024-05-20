@@ -1,0 +1,3 @@
+@usingMicrosoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser>SignInManager
