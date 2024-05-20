@@ -1,3 +1,4 @@
+
 ESTUDOS .NET 6.0 MVC
 
 MVC: URL corresponde á uma AÇÃO de um controlador e não a uma pagina - url/{controlador}/{action}/{id}
@@ -139,6 +140,8 @@ Na view alterar ref de @model para ExampleViewModel e utilizar model.atributos p
 Partial View: Componentes de VIEW (= componente do react) - 
 Pode ser reutilizada nas paginas VIEW a partir da chamada <partial name='' for='Model'>
 
+ou Html.Partialasync("partialName")
+
 Criar as partial na pasta shared.
 
 
@@ -234,6 +237,34 @@ NOME DO USER/LOGOUT OU LOGIN/REGISTER.
 VIEW INJECTION: permite injetar dependecias em uma View através da palavra chave @Inject
 
 
+------------------------------------------------
+
+AREAS: Separar as partes de um sistema MVC em areas: cada area possui seu proprios controller e views
+
+Cada area possui uma rota pra si.
+Sendo especificada na chamada da url no endpoint: areaName:"Area Exemplo" ou  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+
+Em links e ancoras utilizar o paramentro asp-area:"Admin" para referenciar redirecionamento para paginas na seguinte area citada
+
+ROLES: Restringe acesso somenta para os UsersRolers
+
+classe RoleManager: possui os atributos e metodos necessario para criar e manipular usuarios admin.
+
+Criar Interface + Classe para gerar funções de criação de usuário e role.
+
+Arquivo _Startup: add.Scoped <Interface> + instanciar seedUserRoleInital 
++ 
+seedUserRoleInital.(SeedRoles / SeedUsers) => acionar função da interface que cria role e cria usuario
+
+
+
+------------------------------------------------
+
+SCAFOLDING CONTROLLER: Utilizar para Criar components CONTROLLER CRUD(CREATE, READ, UPDATE, DELETE) + VIEWS automaticamente.
+
+Versão 8 pra cima
+
+------------------------------------------------
 
 
 

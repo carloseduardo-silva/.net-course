@@ -1,9 +1,11 @@
 ﻿using LanchesMac.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LanchesMac.Controllers
 {
+   
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -15,11 +17,11 @@ namespace LanchesMac.Controllers
             _singInManager = singInManager;
         }
 
-        public IActionResult Login(string returnUrl)
+        public IActionResult Login(string? returnUrl)
         {
             return View(new LoginViewModel()
             {
-                ReturnUrl = returnUrl,
+                ReturnUrl = returnUrl
             });
         }
 
@@ -36,7 +38,7 @@ namespace LanchesMac.Controllers
             //verifica se o usuario esta no banco
             if(user != null)
             {
-                //verifica se a senha passa coincide com o login do usuario no banco
+                //verifica se a senha passada coincide com o login do usuario no banco
                 var result = await _singInManager.PasswordSignInAsync(await user, loginVM.Password, false, false);
                 if (result.Succeeded)
                 {
@@ -44,7 +46,7 @@ namespace LanchesMac.Controllers
                     {
                         return RedirectToAction("Index", "Home");
                     }
-                    return View(loginVM.ReturnUrl);
+                    return Redirect(loginVM.ReturnUrl);
                 }
             }
             ModelState.AddModelError("", "Falha ao realizar o login");
@@ -71,6 +73,7 @@ namespace LanchesMac.Controllers
 
                 if(result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "Member");
                     return RedirectToAction("Login", "Account");
                 }
                 else
@@ -91,6 +94,11 @@ namespace LanchesMac.Controllers
             HttpContext.User = null;
             await _singInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 
