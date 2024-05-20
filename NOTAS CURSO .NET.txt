@@ -208,13 +208,26 @@ Para editar as paginas geradas automaticamente:
 1.Botão direito no projeto, abrir menu scafold, identity, selecionar paginas que serão alteradas 
 -> assim o acesso as VIEWS E CONTROLLERS das paginas de login e registro estará disponível em Areas/Identity
 
-CONFIG:
+- CONFIG:
 1. Instalar microsoft.identyCore dependencie
 2. config no db.Context: herdar IdentyDbContext<IdentityUser>
 3. config no _startup: configure services + app.useAuthetication
 
-CRIAR ACCOUNT CONTROLLER: 
+- CRIAR ACCOUNT CONTROLLER: 
 Teremos DI(Injeção de dependencia) para userManegement, signInManager
+
+- LOGOUT: 
+SignInManager.SignOut() + HttpContext.(Session.clear() / user = null)
+atribuir action do controller ao botão de logout da view
+
+- USAR VIEW INJECT NA PARTIAL, PARA TER ACESSOA A INSTANCIA DE USUARIO/ VERIFICAR SE O MESMO ESTÁ LOGADO / CONDICIONAL PARA EXIBIR:
+NOME DO USER/LOGOUT OU LOGIN/REGISTER.
+
+*AUTHORIZE: restriçãode views para usuários logados ou não.
+
+[AUTHORIZE]: no controllador, restringe todas as action/views
+[AllowAnonymous]: na view, permite anonimos na views especifica com a tag. 
+
 
 ------------------------------------------------
 
