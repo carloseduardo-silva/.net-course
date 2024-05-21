@@ -1,4 +1,5 @@
-﻿using LanchesMac.Context;
+﻿using LanchesMac.Areas.Admin.Servicos;
+using LanchesMac.Context;
 using LanchesMac.Models;
 using LanchesMac.Repositories;
 using LanchesMac.Repositories.Interfaces;
@@ -38,12 +39,16 @@ public class Startup
             options.Password.RequiredUniqueChars = 1;
         });
 
+        services.Configure<ConfigurationImagens>(Configuration.GetSection("ConfigurationPastaImagens"));
+
         services.AddTransient<ILancheRepository, LancheRepository>();  
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IPedidoRepository, PedidoRepository>();   
         services.AddScoped(sp => CarrinhoCompra.GetCarrinho(sp));
 
         services.AddScoped <ISeedUserRoleInitial, SeedUserRoleInitial>();
+        services.AddScoped<RelatorioVendaService>();
+        services.AddScoped<GraficoVendaService>();  
 
         services.AddPaging(options =>
         {

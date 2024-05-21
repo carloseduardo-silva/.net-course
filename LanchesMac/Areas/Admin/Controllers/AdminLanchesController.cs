@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using LanchesMac.Context;
 using LanchesMac.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using ReflectionIT.Mvc.Paging;
 
 namespace LanchesMac.Areas.Admin.Controllers
 {
@@ -23,10 +25,18 @@ namespace LanchesMac.Areas.Admin.Controllers
         }
 
         // GET: Admin/AdminLanches
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string filter, int pageindex=1, string sort="Nome")
         {
-            var appDbContext = _context.Lanches.Include(l => l.Categoria);
-            return View(await appDbContext.ToListAsync());
+            var resultado = _context.Lanches.Include(l => l.Categoria).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(filter))
+            {
+                resultado = resultado.Where(p => p.Nome.Contains(filter));
+               
+            }
+            var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+            model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+            return View(model);
         }
 
         // GET: Admin/AdminLanches/Details/5
@@ -56,8 +66,7 @@ namespace LanchesMac.Areas.Admin.Controllers
         }
 
         // POST: Admin/AdminLanches/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("LancheId,Nome,DescricaoCurta,DescricaoDetalhada,Preco,ImagemUrl,ImagemThumbnailUrl,IsLanchePreferido,EmEstoque,CategoriaId")] Lanche lanche)

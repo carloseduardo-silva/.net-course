@@ -266,6 +266,64 @@ Versão 8 pra cima
 
 ------------------------------------------------
 
+PAGINAÇÃO DE DADOS
+
+- Baixar dependencia/pacote reflection.mvc.paging e incluir na _viewImports
+
+- Config para passar os dados ja paginados do controller -> view
+
+- declarar o modelo ReflectionIT.Mvc.Paging.PagingList<LanchesMac.Models.Name>
+
+NO CONTROLLER:
+ public async Task<IActionResult> Index(string filter, int pageindex=1, string sort="Nome")
+ {
+	//filtro
+     var resultado = _context.Lanches.Include(l => l.Categoria).AsQueryable();
+
+     if (!resultado.IsNullOrEmpty())
+     {
+         resultado = resultado.Where(p => p.Nome.Contains(filter));
+        
+     }
+	//paginação dos dados
+     var model = await PagingList.CreateAsync(resultado, 5, pageindex, sort, "Nome");
+     model.RouteValue = new RouteValueDictionary { { "filter", filter } };
+     return View(model);
+ }
+
+------------------------------------------------
+
+AULA 93 CURSO ASP CORE: FILTRO DE VENDAS A PARTIR DE DATAS
+
+Criar Service + Controlador (Metodos de filtro) + Views (Para exibir formulário pré e itens pós consulta)
+
+------------------------------------------------
+
+GERENCIAMENTO DE IMAGENS NO ASP CORE:
+
+Segurança das imagens é um ponto muito importante, logo teremos que configurar para que apenas os usuário autenticados com permissão tenham acesso ao CRUD das imagens.
+
+<form enctype="multipart/form-data"> => utilizado para evidenciar o envio de arquivos no formulário
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
