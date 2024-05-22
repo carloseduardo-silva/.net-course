@@ -225,10 +225,11 @@ atribuir action do controller ao botão de logout da view
 
 - USAR VIEW INJECT NA PARTIAL, PARA TER ACESSOA A INSTANCIA DE USUARIO/ VERIFICAR SE O MESMO ESTÁ LOGADO / CONDICIONAL PARA EXIBIR:
 NOME DO USER/LOGOUT OU LOGIN/REGISTER.
+User.IsInRole("admin") = boolean para ver se esta logado ou não
 
-*AUTHORIZE: restriçãode views para usuários logados ou não.
+*AUTHORIZE: restrição de views para usuários logados ou não.
 
-[AUTHORIZE]: no controllador, restringe todas as action/views
+[Authorize("")]: no controllador, restringe todas as action/views
 [AllowAnonymous]: na view, permite anonimos na views especifica com a tag. 
 
 
@@ -305,6 +306,34 @@ Segurança das imagens é um ponto muito importante, logo teremos que configurar
 
 <form enctype="multipart/form-data"> => utilizado para evidenciar o envio de arquivos no formulário
 
+METODOS PARA UPDATE E GETIMAGES NO CONTROLLER ADMINIMAGENS -> MODULO 9 
+Combinar caminhos filereader/manager etc;
+
+------------------------------------------------
+
+Gráficos com Google Chart - MODULO 10:
+
+Controller puxando os dados/ organizando-os / enviando para as views
+Views recebe os dados e aplica os componentes google chart para exibir os gráficos
+Puxar os dados chamando: @Url.Action("Action" "Controller")
+
+
+------------------------------------------------
+
+CLASSE _PROGRAM
+
+var builder = WebApplication.CreateBuilder(args);
+
+services config => builder.Services
+
+
+var app = builder.Build()
+
+configure config => 
+
+
+
+app.run()
 
 
 

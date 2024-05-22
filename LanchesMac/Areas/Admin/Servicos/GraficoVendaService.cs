@@ -19,7 +19,7 @@ namespace LanchesMac.Areas.Admin.Servicos
             var lanches = (from pd in _context.PedidosDetalhe
                            join l in _context.Lanches on pd.LancheId equals l.LancheId
                            where pd.Pedido.PedidoEnviado >= data
-                           group pd by new { pd.LancheId, l.Nome, pd.Quantidade }
+                           group pd by new { pd.LancheId, l.Nome }
                            into g
                            select new
                            {
@@ -27,6 +27,7 @@ namespace LanchesMac.Areas.Admin.Servicos
                                LanchesQuantidade = g.Sum(q => q.Quantidade),
                                LanchesValorTotal = g.Sum(a =>a.Preco * a.Quantidade)
                            });
+
             var lista = new List<LancheGrafico>();  
 
             //preenchendo instancia lancheGrafico com os dados da consulta a cima

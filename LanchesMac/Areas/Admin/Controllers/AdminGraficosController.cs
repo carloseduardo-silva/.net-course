@@ -1,15 +1,18 @@
 ﻿using LanchesMac.Areas.Admin.Servicos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LanchesMac.Areas.Admin.Controllers
 {
+    [Area("Admin")]
+    
     public class AdminGraficosController : Controller
     {
         private readonly GraficoVendaService _graficoVendas;
 
         public AdminGraficosController(GraficoVendaService graficoVendas)
         {
-            _graficoVendas = graficoVendas;
+            _graficoVendas = graficoVendas ?? throw new ArgumentNullException(nameof(graficoVendas));
         }
         public JsonResult VendasLanches(int dias)
         {

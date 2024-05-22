@@ -46,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Areas/Admin/Views/AdminGraficos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Areas/Admin/Views/AdminGraficos/VendasMensal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvc1xWZW5kYXNNZW5zYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Areas/Admin/Views/AdminGraficos/VendasSemanal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvc1xWZW5kYXNTZW1hbmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Areas/Admin/Views/AdminImagens/GetImages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEdldEltYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -188,6 +200,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Views/Shared/_Carousel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CESilva4/source/repos/LanchesMac/.net-course/LanchesMac/Views/Shared/_LanchesResumo.cshtml]
