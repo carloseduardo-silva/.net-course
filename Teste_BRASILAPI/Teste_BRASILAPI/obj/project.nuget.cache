@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qfNZEo5gPpbpywtQSoGq44nAgcHtYmpKKB/7ve8s4r5bgl918dE3ssq4vPh+/Ub9pF/9uk/6EWcf6ZvLJrIZIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\Teste_BRASILAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CESilva4\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\CESilva4\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\CESilva4\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\CESilva4\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "C:\\Users\\CESilva4\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "C:\\Users\\CESilva4\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+  ],
+  "logs": []
+}

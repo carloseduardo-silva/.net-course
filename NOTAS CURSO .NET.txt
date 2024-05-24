@@ -329,14 +329,28 @@ services config => builder.Services
 
 var app = builder.Build()
 
-configure config => 
-
+configure config => app.
 
 
 app.run()
 
 
 
+
+------------------------------------------------
+
+
+
+CONSUMINDO API DE TERCEIROS COM ASP CORE:
+
+Criar Pasta Models (colunas da tabela), 
+Controller (Herda os Dados da INTERFACE) , Views
+
+Criar Pasta: Dtos/Arquivo Solto (Igual a Model porém sem JsonStringName), 
+
+Interfaces (APENAS CRIAÇÃO E DECLARAÇÃO dos Métodos que serão implemetados utilizando a API), 
+
+Service ( herda os metodos apenas declarados da Interface, e dentro dele são codadas as funções dos métodos)
 
 
 

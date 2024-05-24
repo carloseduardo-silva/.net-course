@@ -1,0 +1,17 @@
+﻿@model EnderecoModel
+
+
+@if (Model.Verificacao)
+{
+    <h1> Segue mais informaçoes sobre o CEP buscado:</h1>
+    <p> @Model.Cep</p>
+    <p> @Model.Estado </p>
+    <p> @Model.Cidade</p>
+    <p> @Model.Região</p>
+    <p> @Model.Rua</p>
+}
+else
+{
+    <h2> @Model.ErrorMessage</h2>
+    
+}
