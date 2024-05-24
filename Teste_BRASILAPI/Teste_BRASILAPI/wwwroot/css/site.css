@@ -15,4 +15,30 @@ html {
 
 body {
   margin-bottom: 60px;
+   background-image: url("fundo.png");
+  background-position: center center;
+  background-size: cover;
+ 
+}
+
+h3{
+    font-size: 36px;
+}
+
+p {
+    font-size: 26px;
+    color: #051130;
+    margin-bottom:40px
+}
+
+button {
+    background-color: #EF6B48;
+    
+}
+
+button:hover{
+    transform:scale(1.1);
+    transition: 300ms;
+    cursor:pointer;
+
 }

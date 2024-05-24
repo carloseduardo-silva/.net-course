@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\Teste_BRASILAPI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\css\\fundo.png",
+      "PackagePath": "staticwebassets\\css\\fundo.png"
+    },
+    {
       "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\images\\fundo.png",
+      "PackagePath": "staticwebassets\\images\\fundo.png"
     },
     {
       "Id": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\js\\site.js",

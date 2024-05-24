@@ -8,8 +8,6 @@ C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRAS
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\obj\Debug\net6.0\Teste_BRASILAPI.RazorAssemblyInfo.cache
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\obj\Debug\net6.0\Teste_BRASILAPI.RazorAssemblyInfo.cs
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\obj\Debug\net6.0\Teste_BRASILAPI.sourcelink.json
-C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\Teste_BRASILAPI.staticwebassets.runtime.json
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\Teste_BRASILAPI.exe
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\Teste_BRASILAPI.deps.json
@@ -36,3 +34,5 @@ C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRAS
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\obj\Debug\net6.0\Teste_BRASILAPI.pdb
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\obj\Debug\net6.0\Teste_BRASILAPI.genruntimeconfig.cache
 C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\obj\Debug\net6.0\ref\Teste_BRASILAPI.dll
+C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\Views\appsettings.Development.json
+C:\Users\CESilva4\source\repos\LanchesMac\.net-course\Teste_BRASILAPI\Teste_BRASILAPI\bin\Debug\net6.0\Views\appsettings.json

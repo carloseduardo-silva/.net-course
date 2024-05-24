@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KmuqG5HLskUzT/yQzSwQ+DOXTcwrB06ILKaHHFFNPuw=",
+  "Hash": "YxxExzusfWkY5Cr+B+Ad1TbtHnp75+JiFBtQnYymMoc=",
   "Source": "Teste_BRASILAPI",
   "BasePath": "_content/Teste_BRASILAPI",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Teste_BRASILAPI.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\css\\fundo.png",
+      "SourceId": "Teste_BRASILAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\",
+      "BasePath": "_content/Teste_BRASILAPI",
+      "RelativePath": "css/fundo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\fundo.png"
+    },
+    {
       "Identity": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\css\\site.css",
       "SourceId": "Teste_BRASILAPI",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\images\\fundo.png",
+      "SourceId": "Teste_BRASILAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\",
+      "BasePath": "_content/Teste_BRASILAPI",
+      "RelativePath": "images/fundo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fundo.png"
     },
     {
       "Identity": "C:\\Users\\CESilva4\\source\\repos\\LanchesMac\\.net-course\\Teste_BRASILAPI\\Teste_BRASILAPI\\wwwroot\\js\\site.js",
