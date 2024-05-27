@@ -1,12 +1,14 @@
 ﻿@model EnderecoModel
 
 
-@if (Model.Verificacao)
+
+@if(Model.Verificacao)
 {
+
     <div style="height: 100vh; " class=" d-flex flex-column justify-content-start align-items-center pt-5 my-5 text-light  ">
         <h1 class="text-center mb-5"> Segue mais informaçoes sobre o CEP buscado:</h1>
 
-        <form asp-controller="Home" asp-action="Index"> 
+        <form asp-controller="Home" asp-action="EnderecoInfo">
             <div style="background-image:linear-gradient(#a6a6a6, #ffff);" class="d-flex flex-column align-items-center
             justify-content-start  pt-5 pb-4 px-5 rounded">
                 <h3 style="color: #051130; font-weight:700;" class="mb-5"> CEP REQUERIDO: <span style="color:white;"> @Model.Cep </span> </h3>
@@ -16,17 +18,18 @@
                 <p> Rua: <span style="color:#EF6B48; font-weight:600">@Model.Rua</span></p>
 
 
-                <button class="rounded px-4 py-1 text-light mt-4 border-0" style="font-size: 24px;" type="submit"> Voltar </button>
+                <button asp-controller="Home" asp-action="Index" class="rounded px-4 py-1 text-light mt-4 border-0" style="font-size: 24px;" type="submit"> Voltar </button>
 
             </div>
         </form>
-      
+
 
     </div>
-
 }
 else
 {
-    <h2> @Model.ErrorMessage</h2>
-    
+    <h2> @Model.ErrorMessage </h2>
 }
+
+
+

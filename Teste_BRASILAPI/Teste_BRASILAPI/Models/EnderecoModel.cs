@@ -22,8 +22,8 @@ namespace Teste_BRASILAPI.Models
         [JsonPropertyName("service")]
         public string? Servico { get; set; }
 
-        public bool Verificacao = false;
 
+        public bool Verificacao { get; set; }
         public string? ErrorMessage { get; set; }
 
        

@@ -5,7 +5,7 @@ using Teste_BRASILAPI.Services;
 namespace Teste_BRASILAPI.Controllers
 {
     [ApiController]
-    [Route("endereco/{controller}")]
+    [Route("{controller}")]
     public class EnderecoController : Controller
     {
 
@@ -16,15 +16,16 @@ namespace Teste_BRASILAPI.Controllers
             _enderecoService = enderecoService;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
 
-        [HttpGet("api/v1/{cep}")]
+        [HttpGet("{action}")]
        
-        public async Task<IActionResult> EnderecoInfo([FromRoute] string cep)
+        public async Task<IActionResult> EnderecoInfo(string cep)
         {
             var response = await _enderecoService.BuscarEndereco(cep);
 
