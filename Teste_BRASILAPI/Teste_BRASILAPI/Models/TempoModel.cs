@@ -14,7 +14,7 @@ namespace Teste_BRASILAPI.Models
         public string? AtualizacaoData { get; set; }
         
         [JsonPropertyName("Previsao")]
-        public Task<Clima> Previsao { get; set; }
+        public Clima Previsao { get; set; }
 
         public bool Verificacao { get; set; }
         public string? ErrorMessage { get; set; }

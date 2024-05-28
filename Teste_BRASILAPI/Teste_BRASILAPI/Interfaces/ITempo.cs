@@ -7,6 +7,6 @@ namespace Teste_BRASILAPI.Interfaces
 
         Task<TempoModel> BuscarCidade(string cidade);
 
-       List<Clima> Previsao(int cityCode);
+        Task<Clima> Previsao(int cityCode);
     }
 }
