@@ -61,7 +61,7 @@ Após config certinha da AULA18:
 No Package Manager Console:
 1. add-migration Name
 2. update-migration (cria banco de dados)
-3 remove-mgration
+3 remove-migration
 
 
 PRRENCHER TABELAS ATRVÉS DO MIGRATION:
@@ -205,7 +205,7 @@ defaults: {controller ="controller default", action="action default"}
 
 ------------------------------------------------
 
-IDENTITY: Instalação que suporte para login e registro do proprio ASP.NET CORE.
+IDENTITY: Instalação que da suporte para login e registro do proprio ASP.NET CORE.
 
 Para editar as paginas geradas automaticamente: 
 1.Botão direito no projeto, abrir menu scafold, identity, selecionar paginas que serão alteradas 
@@ -240,7 +240,7 @@ VIEW INJECTION: permite injetar dependecias em uma View através da palavra chav
 
 ------------------------------------------------
 
-AREAS: Separar as partes de um sistema MVC em areas: cada area possui seu proprios controller e views
+AREAS: Separar/Restringir as partes de um sistema MVC em areas: cada area possui seu proprios controller e views
 
 Cada area possui uma rota pra si.
 Sendo especificada na chamada da url no endpoint: areaName:"Area Exemplo" ou  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
@@ -336,9 +336,7 @@ app.run()
 
 
 
-
 ------------------------------------------------
-
 
 
 CONSUMINDO API DE TERCEIROS COM ASP CORE:
@@ -352,15 +350,17 @@ Interfaces (APENAS CRIAÇÃO E DECLARAÇÃO dos Métodos que serão implemetados
 
 Service ( herda os metodos apenas declarados da Interface, e dentro dele são codadas as funções dos métodos)
 
+------------------------------------------------
+
+Sobre 5 modal
 
 
+botao atualizar autorização -> desnecessario 
 
 
+ignorar foto autorização 
 
-
-
-
-
+falta geração da carterinha
 
 
 
